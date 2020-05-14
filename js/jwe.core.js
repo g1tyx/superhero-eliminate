@@ -2,10 +2,10 @@
 * 基础核心方法脚本
 */var _ucArr=new Array();function createAppCode(){while(_ucArr.length<_UniTypeNumber){var n=Math.floor(Math.random()*(_UniTypeNumberMax));var isNew=true;for(var k in _ucArr){if(_ucArr[k]==n){isNew=false;break;}}
 if(isNew)_ucArr.push(n);}}
-function uniCode(n){var html="<div class='uni' lang="+n+" ><img lang="+n+" src='_img/uni/"+_dir+"/"+n+"."+_extName+"' /></div>";return html;}
-function bgImgCode(n){var html="url(_img/bg/"+_dir+"/"+n+"."+_bgExtName+")";return html;}
-function giCode1(n){var html="<img src='_img/sexy/heroPic1/"+n+".png' />";return html;}
-function xPCode(n){var s=n.toString();while(s.length<3)s="0"+s;var pic="E"+s+".JPG";var html="<img src='_img/sexy/endPic/"+pic+"' />";return html;}
+function uniCode(n){var html="<div class='uni' lang="+n+" ><img lang="+n+" src='img/uni/"+_dir+"/"+n+"."+_extName+"' /></div>";return html;}
+function bgImgCode(n){var html="url(img/bg/"+_dir+"/"+n+"."+_bgExtName+")";return html;}
+function giCode1(n){var html="<img src='img/sexy/heroPic1/"+n+".png' />";return html;}
+function xPCode(n){var s=n.toString();while(s.length<3)s="0"+s;var pic="E"+s+".JPG";var html="<img src='img/sexy/endPic/"+pic+"' />";return html;}
 function aNewUni(n){if(n==null)n=Math.floor(Math.random()*(_UniTypeNumber));var N=_ucArr[n];return uniCode(N);}
 function getSwitcherTD(td,sign){var id=td.id;var ss=id.split("_");var r=parseInt(ss[1]);var c=parseInt(ss[2]);if(sign=="up"){r--;}
 else if(sign=="dn"){r++;}
